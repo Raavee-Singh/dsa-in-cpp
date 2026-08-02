@@ -7,7 +7,7 @@ int main(){
     int i=1;
     while(i<=n){
         sum+=i;
-        i++; //i+=2 for sum of even numbers till n
+        i++; //i+=2 and int i=2 for sum of even numbers till n
     }
     std::cout<<"Sum is: "<<sum<<std::endl;
     return 0;
