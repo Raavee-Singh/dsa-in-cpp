@@ -3,6 +3,9 @@ void swapAlternate(int arr[],int size){
     int i=0;
     while(i+1<size){
         std::swap(arr[i],arr[i+1]);
+        //int temp=arr[i+1];
+        //arr[i+1]=arr[i];
+        //arr[i]=temp;
         i+=2;
     }
 }
