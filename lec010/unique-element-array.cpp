@@ -1,4 +1,10 @@
 #include<iostream>
+int acceptArray(int arr[],int size){
+    std::cout<<"Enter the elements of array: ";
+    for(int i=0;i<size;i++){
+        std::cin>>arr[i];
+    }
+}
 int uniqueArray(int arr[],int size){//int arr[]=int *arr
     int ans=0;
     for(int i=0;i<size;i++){
@@ -7,8 +13,10 @@ int uniqueArray(int arr[],int size){//int arr[]=int *arr
     return ans;
 }
 int main(){
-    int arr[5]={1,2,1,3,2};
-    int result=uniqueArray(arr,5);
+    int arr[5];
+    int size=sizeof(arr)/sizeof(int);
+    acceptArray(arr,size);
+    int result=uniqueArray(arr,size);
     std::cout<<result;
     return 0;
 }
