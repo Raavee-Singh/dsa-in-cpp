@@ -10,7 +10,7 @@ void swapAlternate(int arr[],int size){
     }
 }
 void printArray(int arr[],int size){
-    std::cout<<"Array is: ";
+    std::cout<<"Updated Array is: ";
     for(int i=0;i<size;i++){
         std::cout<<arr[i]<<" ";
     }
