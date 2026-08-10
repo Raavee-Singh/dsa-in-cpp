@@ -17,6 +17,7 @@ int main(){
     int size=sizeof(arr)/sizeof(int);
     acceptArray(arr,size);
     int result=uniqueArray(arr,size);
-    std::cout<<"The unique element in the array is: "<<result<<std::endl;
+    std::cout<<"The unique element in the array is: "<<result;
+    std::cout<<std::endl;
     return 0;
 }
