@@ -163,6 +163,18 @@ void rightTriRevChar(int n){
         std::cout<<std::endl;
     }
 }
+void difRightStarTri(int n){
+    for(int i=1;i<=n;i++){
+        //spaces first
+        for(int j=1;j<=n-i;j++){
+            std::cout<<" ";
+        }
+        for(int j=1;j<=i;j++){
+            std::cout<<"*";
+        }
+        std::cout<<std::endl;
+    }
+}
 int main(){
     int n;
     std::cout<<"Enter the value of n: ";
@@ -202,6 +214,8 @@ int main(){
     rightTriCharSpl(n);
     std::cout<<std::endl;
     rightTriRevChar(n);
+    std::cout<<std::endl;
+    difRightStarTri(n);
     std::cout<<std::endl;
     return 0;
 }
