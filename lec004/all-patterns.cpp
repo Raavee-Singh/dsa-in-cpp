@@ -175,6 +175,25 @@ void difRightStarTri(int n){
         std::cout<<std::endl;
     }
 }
+void upRightTriStar(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i+1;j++){
+            std::cout<<"*";
+        }
+        std::cout<<std::endl;
+    }
+}
+void sideRightTriStar(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i-1;j++){
+            std::cout<<" ";
+        }
+        for(int j=1;j<=n-i+1;j++){
+            std::cout<<"*";
+        }
+        std::cout<<std::endl;
+    }
+}
 int main(){
     int n;
     std::cout<<"Enter the value of n: ";
@@ -217,5 +236,9 @@ int main(){
     std::cout<<std::endl;
     difRightStarTri(n);
     std::cout<<std::endl;
+    upRightTriStar(n);
+    std::cout<<std::endl;  
+    sideRightTriStar(n);
+    std::cout<<std::endl;  
     return 0;
 }
