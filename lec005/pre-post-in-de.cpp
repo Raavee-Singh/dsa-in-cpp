@@ -9,7 +9,7 @@ int main(){
     std::cout<<"Post-decrement: "<<a--<<std::endl;
     for(int i=0;i<10;i++){
         if(i==4){
-            continue;
+            continue;//break and continue logic
         }
         if(i==6){
             break;
