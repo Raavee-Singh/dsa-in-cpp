@@ -47,6 +47,6 @@ int main(){
     printArray(arr,size);
     std::cout<<"The unique number in the array is: "<<findUnique(arr,size)<<std::endl;
     int ans=findDuplicate(arr,size);
-    std::cout<<ans;
+    std::cout<<"The number which appears two times in the array is: "<<ans;
     return 0;
 }
