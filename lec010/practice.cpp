@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
 void acceptArray(int *arr,int size){
     std::cout<<"Enter the elements of array: ";
     for(int i=0;i<size;i++){
@@ -39,6 +41,21 @@ int findDuplicate(int *arr,int size){
     }
     return ans;
 }
+std::vector<int> countOccurrences(int *arr,int size){
+    std::sort(arr,arr+size);
+    std::vector<int> ans;
+    for(int i=0;i<size;i++){
+        int count=1;
+        for(int j=i+1;j<size;j++){
+            if(arr[i]==arr[j]){
+                count++;
+            }
+        }
+        ans.push_back(count);
+        i+=count-1;
+    }
+    return ans;
+}
 int main(){
     int arr[7];
     int size=sizeof(arr)/sizeof(int);
@@ -47,6 +64,10 @@ int main(){
     printArray(arr,size);
     std::cout<<"The unique number in the array is: "<<findUnique(arr,size)<<std::endl;
     int ans=findDuplicate(arr,size);
-    std::cout<<"The number which appears two times in the array is: "<<ans;
+    std::cout<<"The number which appears two times in the array is: "<<ans<<std::endl;
+    std::vector<int> a=countOccurrences(arr,size);
+    for(int i=0;i<a.size();i++){
+        std::cout<<a[i]<<" ";
+    }
     return 0;
 }
