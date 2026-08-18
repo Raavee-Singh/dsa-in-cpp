@@ -20,6 +20,13 @@ void printArray(int *arr, int size){
         std::cout<<arr[i]<<" ";
     }
 }
+int findUnique(int *arr,int size){
+    int ans=0;
+    for(int i=0;i<size;i++){
+        ans=ans^arr[i];
+    }
+    return ans;
+}
 int main(){
     int arr[5];
     int brr[6];
@@ -30,5 +37,7 @@ int main(){
     acceptArray(brr,6);
     swapAlternate(brr,6);
     printArray(brr,6);
+    std::cout<<std::endl;
+    std::cout<<"Unique number is: "<<findUnique(arr,5);
     return 0;
 }
