@@ -14,7 +14,11 @@ int peakMountain(int *arr,int size){
     }
 }
 void printArray(int *arr,int size){
-    
+    std::cout<<"The array is: ";
+    for(int i=0;i<size;i++){
+        std::cout<<arr[i]<<" ";
+    }
+    std::cout<<std::endl;
 }
 int main(){
     int arr[6];
