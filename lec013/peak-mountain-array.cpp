@@ -1,6 +1,6 @@
 #include<iostream>
 void acceptArray(int *arr,int size){
-    std::cout<<"Enter the length of array: ";
+    std::cout<<"Enter the array elements: ";
     for(int i=0;i<size;i++){
         std::cin>>arr[i];
     }
@@ -23,4 +23,5 @@ void printArray(int *arr,int size){
 int main(){
     int arr[6];
     acceptArray(arr,6);
+    printArray(arr,6);
 }
