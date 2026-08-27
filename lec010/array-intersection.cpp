@@ -6,9 +6,6 @@ std::vector<int> findArrayIntersection(std::vector<int> &arr1,std::vector<int> &
     for(int i=0;i<arr1.size();i++){
         int element = arr1[i];
         for(int j=0;j<arr2.size();j++){
-            if(element<arr2[j]){
-                break;
-            }
             if(element==arr2[j]){
                 ans.push_back(element);
                 arr2[j]=-18224;
