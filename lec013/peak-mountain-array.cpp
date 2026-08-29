@@ -9,9 +9,16 @@ int peakMountain(int *arr,int size){
     int start=0;
     int end=size-1;
     int mid=start+(end-start)/2;
-    while(start<=end){
-        
+    while(start<end){
+        if(arr[mid]<arr[mid+1]){
+            start=mid+1;
+        }
+        else{
+            end=mid;
+        }
+        mid=start+(end-start)/2;
     }
+    return start;
 }
 void printArray(int *arr,int size){
     std::cout<<"The array is: ";
@@ -24,4 +31,7 @@ int main(){
     int arr[6];
     acceptArray(arr,6);
     printArray(arr,6);
+    int result= peakMountain(arr,6);
+    std::cout<<arr[result];
+    return 0;
 }
