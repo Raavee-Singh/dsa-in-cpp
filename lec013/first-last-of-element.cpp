@@ -54,6 +54,7 @@ int main(){
     std::pair<int,int> p;
     p.first=firOcc(arr,6,key);
     p.second=lastOcc(arr,6,key);
+    std::cout<<"The first and last position of "<<key<<"is: ";
     std::cout<<p.first<<", "<<p.second<<std::endl;
     return 0;
 }
