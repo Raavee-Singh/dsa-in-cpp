@@ -28,7 +28,6 @@ int acceptKey(){
     std::cout<<"Enter the key to be searched: ";
     std::cin>>key;
     return key;
-
 }
 int main(){
     int arr[6];
@@ -36,7 +35,7 @@ int main(){
     int key=acceptKey();
     int result=binarySearch(arr,6,key);
     if(result!=-1){
-        std::cout<<"Element found at: "<<result<<std::endl;
+        std::cout<<"Element found at: (0-indexing)"<<result<<std::endl;
     }
     else{
         std::cout<<"Element not found."<<std::endl;
