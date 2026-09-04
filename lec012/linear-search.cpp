@@ -22,7 +22,7 @@ int main(){
     std::cin>>key;
     int result=linearSearch(arr,size,key);
     if(result!=-1){
-        std::cout<<"Element found at "<<result<<std::endl;
+        std::cout<<"Element found at "<<result<<" (0-indexing)"<<std::endl;
     }
     else{
         std::cout<<"Element not found"<<std::endl;
