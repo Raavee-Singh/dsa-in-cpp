@@ -29,10 +29,25 @@ void printAgain(std::array<int, 5>& arr){
 void reverseArray(int *arr,int size){
     int start=0,end=size-1;
     while(start<=end){
-        std::swap(arr[start],arr[end]);
+        //std::swap(arr[start],arr[end]);
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
         start++;
         end--;
     }
+}
+std::array<int,5> reverse(std::array<int,5>& arr){
+    int start=0,end=arr.size()-1;
+    while(start<=end){
+        //std::swap(arr[start],arr[end]);
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+    }
+    return arr;
 }
 int main(){
     int arr[5];
@@ -46,6 +61,7 @@ int main(){
     std::cout<<std::endl;
     size=brr.size();
     acceptAgain(brr);
-    printAgain(brr);
+    std::array<int,5> res = reverse(brr);
+    printAgain(res);
     return 0;
 }
