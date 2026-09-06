@@ -26,12 +26,22 @@ void printAgain(std::array<int, 5>& arr){
     }
     std::cout<<std::endl;
 }
+void reverseArray(int *arr,int size){
+    int start=0,end=size-1;
+    while(start<=end){
+        std::swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+}
 int main(){
     int arr[5];
     std::array<int,5> brr;
     int size;
     size=sizeof(arr)/sizeof(int);
     acceptArray(arr,size);
+    printArray(arr,size);
+    reverseArray(arr,size);
     printArray(arr,size);
     std::cout<<std::endl;
     size=brr.size();
