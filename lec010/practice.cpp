@@ -1,44 +1,31 @@
 #include<iostream>
-#include<algorithm>
+#include<array>
 #include<vector>
-void acceptArray(int *arr,int size){
-    std::cout<<"Enter the elements of the array: ";
-    for(int i=0;i<size;i++){
-        std::cin>>arr[i];
-    }
-}
-void swapAlternate(int *arr,int size){
-    int i=0;
-    while(i+1<size){
+std::vector<int> swapAlternate(std::vector<int>& arr){
+    for(int i=0;i+1<arr.size();i+=2){
         std::swap(arr[i],arr[i+1]);
-        i+=2;
     }
+    return arr;
 }
-void printArray(int *arr, int size){
-    std::cout<<"The array is: ";
+void acceptArray(std::vector<int>& arr,int size){
+    std::cout<<"Enter the array elements: ";
     for(int i=0;i<size;i++){
-        std::cout<<arr[i]<<" ";
+        int val;
+        std::cin>>val;
+        arr.push_back(val);
     }
 }
-int findUnique(int *arr,int size){
-    int ans=0;
-    for(int i=0;i<size;i++){
-        ans=ans^arr[i];
-    }
-    return ans;
-}
-
 int main(){
-    int arr[5];
-    int brr[6];
-    acceptArray(arr,5);
-    swapAlternate(arr,5);
-    printArray(arr,5);
+    std::vector<int> arr;
+    int size;
+    std::cout<<"No. of elements in array: ";
+    std::cin>>size;
+    acceptArray(arr,size);
+    std::vector<int> result=swapAlternate(arr);
+    std::cout<<"The resultant array is: ";
+    for(int x:result){
+        std::cout<<x<<" ";
+    }
     std::cout<<std::endl;
-    acceptArray(brr,6);
-    swapAlternate(brr,6);
-    printArray(brr,6);
-    std::cout<<std::endl;
-    std::cout<<"Unique number is: "<<findUnique(arr,5);
     return 0;
 }

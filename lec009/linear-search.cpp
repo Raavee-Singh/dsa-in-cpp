@@ -5,7 +5,7 @@ int acceptArray(int arr[], int size){
         std::cin>>arr[i];
     }
 }
-int linearSearch(int arr[],int key,int size){
+void linearSearch(int arr[],int key,int size){
     bool found=false;
     for(int i=0;i<size;i++){
         if(key==arr[i]){
